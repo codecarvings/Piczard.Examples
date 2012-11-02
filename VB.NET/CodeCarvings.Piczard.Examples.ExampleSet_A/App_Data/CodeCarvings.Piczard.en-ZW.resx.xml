@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  
+  
+  <data name="Web_Shared_Error_UnableToLoadResources" xml:space="preserve">
+    <value>Piczard client-side library failed to load.</value>
+  </data>
+  <data name="Web_Shared_Error_UpgradeFlashPlayer" xml:space="preserve">
+    <value>You need to upgrade your Adobe Flash Player</value>
+  </data>
+  
+
+  <data name="PT_MUI_Text_Loading" xml:space="preserve">
+    <value>Loading image...</value>
+  </data>
+  <data name="PT_MUI_Text_NoImageLoaded" xml:space="preserve">
+    <value>No image loaded</value>
+  </data>
+
+  <data name="PT_MUI_Text_Details" xml:space="preserve">
+    <value>Details [en-ZW]</value>
+  </data>
+  <data name="PT_MUI_Text_ZoomView" xml:space="preserve">
+    <value>Zoom view</value>
+  </data>
+  <data name="PT_MUI_Text_ResizeImage" xml:space="preserve">
+    <value>Resize image</value>
+  </data>
+  <data name="PT_MUI_Text_RotateFlipImage" xml:space="preserve">
+    <value>Rotate / flip image</value>
+  </data>
+  <data name="PT_MUI_Text_ImageAdjustments" xml:space="preserve">
+    <value>Image adjustments</value>
+  </data>
+
+  <data name="PT_MUI_Text_Original" xml:space="preserve">
+    <value>Source:</value>
+  </data>
+  <data name="PT_MUI_Text_Resized" xml:space="preserve">
+    <value>Resized:</value>
+  </data>
+  <data name="PT_MUI_Text_Cursor" xml:space="preserve">
+    <value>Cursor:</value>
+  </data>
+
+  <data name="PT_MUI_Text_WidthPrefix" xml:space="preserve">
+    <value>W</value>
+  </data>
+  <data name="PT_MUI_Text_HeightPrefix" xml:space="preserve">
+    <value>H</value>
+  </data>
+
+  <data name="PT_MUI_Text_Brightness" xml:space="preserve">
+    <value>Brightness</value>
+  </data>
+  <data name="PT_MUI_Text_Contrast" xml:space="preserve">
+    <value>Contrast</value>
+  </data>
+  <data name="PT_MUI_Text_Hue" xml:space="preserve">
+    <value>Hue</value>
+  </data>
+  <data name="PT_MUI_Text_Saturation" xml:space="preserve">
+    <value>Saturation</value>
+  </data>
+
+  
+
+  <data name="PT_MUI_Tooltip_Original" xml:space="preserve">
+    <value>Original image size
+(Width and Height) in {#uiUnit#}.</value>
+  </data>
+  <data name="PT_MUI_Tooltip_Resized" xml:space="preserve">
+    <value>Current image size
+(Width and Height) in {#uiUnit#},
+using "Resize" factor: {#resizeFactor#}%.</value>
+  </data>
+  <data name="PT_MUI_Tooltip_Cursor" xml:space="preserve">
+    <value>Actual cursor location
+(from Top-Left corner) in {#uiUnit#}.</value>
+  </data>
+  <data name="PT_MUI_Tooltip_SelectionLocation" xml:space="preserve">
+    <value>Actual selection location
+(from Top-Left corner) in {#uiUnit#}.</value>
+  </data>
+  <data name="PT_MUI_Tooltip_SelectionSize" xml:space="preserve">
+    <value>Actual selection size
+(Width and Height) in {#uiUnit#}.</value>
+  </data>
+  
+  <data name="PT_MUI_Tooltip_Zoom" xml:space="preserve">
+    <value>Current image zoom factor.</value>
+  </data>
+  <data name="PT_MUI_Tooltip_Zoom_Slider" xml:space="preserve">
+    <value>Dragging the cursor,
+the view will change
+(without changing any of the original parameters).</value>
+  </data>
+  <data name="PT_MUI_Tooltip_Zoom_Reset" xml:space="preserve">
+    <value>Reset the current image zoom factor.</value>
+  </data>
+  
+  <data name="PT_MUI_Tooltip_Resize" xml:space="preserve">
+    <value>Current image resize factor.</value>
+  </data>
+  <data name="PT_MUI_Tooltip_Resize_Slider" xml:space="preserve">
+    <value>Dragging the cursor, the image will be resized.</value>
+  </data>
+  <data name="PT_MUI_Tooltip_Resize_Reset" xml:space="preserve">
+    <value>Reset the current image resize factor.</value>
+  </data>
+
+  <data name="PT_MUI_Tooltip_Rotate" xml:space="preserve">
+    <value>Rotate image: 0°, 90°, 180°, 270°.</value>
+  </data>
+  <data name="PT_MUI_Tooltip_FlipH" xml:space="preserve">
+    <value>Flip image horizontally.</value>
+  </data>
+  <data name="PT_MUI_Tooltip_FlipV" xml:space="preserve">
+    <value>Flip image vertically.</value>
+  </data>
+
+  <data name="PT_MUI_Tooltip_Brightness" xml:space="preserve">
+    <value>Current brightness.</value>
+  </data>
+  <data name="PT_MUI_Tooltip_Brightness_Slider" xml:space="preserve">
+    <value>Dragging the cursor, the brightness of the image will change.</value>
+  </data>
+  <data name="PT_MUI_Tooltip_Contrast" xml:space="preserve">
+    <value>Current contrast.</value>
+  </data>
+  <data name="PT_MUI_Tooltip_Contrast_Slider" xml:space="preserve">
+    <value>Dragging the cursor, the contrast of the image will change.</value>
+  </data>
+  <data name="PT_MUI_Tooltip_Hue" xml:space="preserve">
+    <value>Current hue.</value>
+  </data>
+  <data name="PT_MUI_Tooltip_Hue_Slider" xml:space="preserve">
+    <value>Dragging the cursor, the hue of the image will change.</value>
+  </data>
+  <data name="PT_MUI_Tooltip_Saturation" xml:space="preserve">
+    <value>Current saturation.</value>
+  </data>
+  <data name="PT_MUI_Tooltip_Saturation_Slider" xml:space="preserve">
+    <value>Dragging the cursor, the saturation of the image will change.</value>
+  </data>
+  <data name="PT_MUI_Tooltip_ImageAdjustments_Reset" xml:space="preserve">
+    <value>Reset every image adjustments parameter.</value>
+  </data>
+
+  
+  
+  <data name="PT_MUI_Button_Zoom_Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+
+  <data name="PT_MUI_Button_Resize_Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+
+  <data name="PT_MUI_Button_ImageAdjustments_Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+
+  
+  
+  <data name="PPT_Popup_Button_Save" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="PPT_Popup_Button_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  
+</root>
