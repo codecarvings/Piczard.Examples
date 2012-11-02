@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CodeCarvings.Piczard.Examples.ExampleSet_A", "CodeCarvings.Piczard.Examples.ExampleSet_A\", "{8CC4CBB9-23B3-45EA-8B06-71BD8CB4889D}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/CodeCarvings.Piczard.Examples.ExampleSet_A"
+		Debug.AspNetCompiler.PhysicalPath = "CodeCarvings.Piczard.Examples.ExampleSet_A\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\CodeCarvings.Piczard.Examples.ExampleSet_A\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/CodeCarvings.Piczard.Examples.ExampleSet_A"
+		Release.AspNetCompiler.PhysicalPath = "CodeCarvings.Piczard.Examples.ExampleSet_A\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\CodeCarvings.Piczard.Examples.ExampleSet_A\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "55436"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL Server Scripts", "SQL Server Scripts", "{D34AD52B-B1F1-4F17-BAB6-39F26797E89B}"
+	ProjectSection(SolutionItems) = preProject
+		..\Common\SQL Server Scripts\CodeCarvings_Piczard_V1_0_ES_A.sql = ..\Common\SQL Server Scripts\CodeCarvings_Piczard_V1_0_ES_A.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CC4CBB9-23B3-45EA-8B06-71BD8CB4889D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CC4CBB9-23B3-45EA-8B06-71BD8CB4889D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

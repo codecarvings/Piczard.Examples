@@ -1,0 +1,521 @@
+﻿html
+{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+}
+
+body 
+{
+	margin: 0px;
+	padding: 0px;
+
+	font: 13px/16px "Lucida Grande", Arial, Sans-serif;
+	color: #333;
+	background-color: #3f3f3f;
+	background-image: url("../gfx/pageBGTop.jpg");
+	background-repeat: repeat-x;
+	width: 100%;
+	height: 100%;
+}
+
+form
+{
+	margin: 0px;
+	width: 100%;
+	height: 100%;	
+}
+
+img
+{
+	border: none;
+}
+
+a:link, a:visited 
+{
+	color: #54691d;
+	text-decoration: underline;
+}
+a:hover
+{
+	color: #769329;
+	text-decoration: underline;
+}
+a:focus 
+{
+	outline: none;
+}
+
+.disabledLink1, .disabledLink1:link, .disabledLink1:visited, .disabledLink1:hover, .disabledLink1:focus
+{
+	color: #aaa;
+	cursor: default;
+	text-decoration: none;
+}
+
+select 
+{
+	padding: 5px;
+}
+
+input[type=text]
+{
+	padding:5px;
+}
+
+.ButtonText
+{
+	font-size: 14px;
+}
+
+#Master_Page
+{
+	width: 900px;
+	min-height: 100%;
+	margin: 0 auto;
+	position: relative;
+	background-color: #fff;
+}
+
+.Master_Page_Border
+{
+	width: 7px;
+	height: 100%;
+	background-color: #9fc63d;
+	background-image: url("../gfx/pageBorder.gif");
+	background-position: left top;
+	background-repeat: no-repeat;
+	overflow: hidden;	
+}
+
+#Master_Page_Border_Left
+{
+	position: absolute;
+	left: -7px;
+}
+
+#Master_Page_Border_Right
+{
+	position: absolute;
+	left: 900px;
+}
+
+#Master_BackToCodeCarvings
+{
+	position: absolute;
+	left: -33px;
+	width: 26px;
+	height: 114px;
+	overflow:hidden;
+}
+
+#Master_Page_Header
+{
+	position: relative;
+	width: 100%;
+	height: 41px;
+	background-image: url("../gfx/headerBG.gif");
+	background-position: left top;
+	background-repeat: repeat-x;
+	z-index: 100;
+}
+
+#Master_Page_Header_Logo
+{
+	position: absolute;
+	width: 156px;
+	height: 41px;
+	overflow: hidden;
+}
+
+#Master_Page_Header_Right
+{
+	position: absolute;
+	top: 0px;
+	left: 600px;
+	width: 300px;
+	height: 41px;
+	background-image: url("../gfx/headerRight.gif");
+	background-position: right top;
+	background-repeat: no-repeat;	 
+	z-index: 10000;
+}
+
+#Master_Page_Body
+{
+	position: relative;
+	z-index: 200;
+	min-height: 360px;
+}
+
+#Master_Page_Footer
+{
+	position: absolute;
+	top: auto;
+	bottom: 0px;
+	width: 100%;
+	overflow: visible;
+	z-index: 5000;
+}
+
+#Master_Page_Footer_Content
+{
+	margin: 7px 7px 0px 7px;
+	padding: 7px;
+	background-color: #eee;
+	color: #555;
+	border-top: solid 7px #ddd;
+}
+
+#Master_Page_Footer_Content_ValidXHTML
+{
+	text-align:right; 
+	width:100%; 
+	height:31px; 
+	overflow:hidden;
+}
+
+#Master_Page_Footer_Content_Text
+{
+	position:absolute; 
+	top:28px;
+}
+
+
+#Theme_Page_BrandLogo
+{
+	position: absolute; 
+	left: 663px; 
+	top: -22px; 
+	width: 230px; 
+	overflow: hidden; 
+	z-index: 500;
+}
+
+#Theme_Page_Body
+{
+	position: relative;
+	z-index: 300;
+	/* NAV-MENU */
+	min-height: 697px;
+}
+
+.pageContainer
+{
+	padding: 14px 14px 70px 14px;
+	margin-right: 237px;
+}
+
+.PageTitle
+{
+	padding: 5px 0px 27px 0px;
+	height: 37px;
+	font-size: 20px;
+}
+
+.PageTitle_MainTitle
+{
+	font-size: 20px;
+	line-height: 22px;
+	font-weight: normal;
+	margin: 0px;
+	color: #54691d;
+}
+
+.PageTitle_SubTitle
+{
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0px;
+	color: #54691d;
+}
+
+.PageTitle a
+{
+	text-decoration: none;
+}
+
+.NavMenu_Container
+{
+	background-color: #80A232; 
+	margin-top: 5px; 
+	color: #ffffff; 
+	padding:5px; 
+	/* NAV-MENU */
+	height: 690px;
+}
+.NavMenu_Container2
+{
+	background-color: #80A232; 
+	margin-top: 7px; 
+	color: #ffffff; 
+	padding:5px; 
+}
+
+.NavMenu_UL0
+{
+	margin:0px; 
+	padding: 15px;
+	list-style-type: none;
+}
+
+.NavMenu_UL1
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+.NavMenu_UL1 li
+{
+	font-size: 14px;
+}
+
+.NavMenu_UL2
+{
+	margin: 0px;
+	padding: 5px 0px 5px 15px;
+}
+
+.NavMenu_UL2 li
+{
+	font-size: 14px;
+}
+
+.blockElem
+{
+}
+
+.blockOverlay {
+  background-color: #000;
+  filter:alpha(opacity=70);
+  opacity:0.7;
+}
+
+.MyUpdateProgress1Background 
+{
+  position:absolute;
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  overflow:hidden;
+  padding:0;
+  margin:0;
+  z-index:20003;
+}
+
+.blockMsg {
+  top:40%; 
+  left:43%;
+  padding:10px;
+  width:14%;
+  background-color:#ffffff;
+  border: solid 5px #e0eebc;
+  text-align: center;
+  color: #6d8729;
+  font-weight: bold;
+  font-size: 18px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.MyUpdateProgress1Window 
+{ 
+  position:absolute; 
+  z-index:20004;
+} 
+
+.blockProgressImage
+{
+	width: 24px;
+	height: 24px;
+	border: none;
+	vertical-align:middle; 
+	padding-right: 5px;
+}
+
+
+
+
+.SortableList
+{ 
+	list-style-type: none; margin: 0; padding: 0; width: 60%; 
+	cursor:n-resize;
+}
+.SortableList li 
+{ 
+	margin: 0 3px 3px 3px; 
+	padding: 0.4em; 
+	padding-left: 1.5em; 
+	font-size: 1.4em; 
+	height: 18px; 
+}
+.SortableList li span 
+{
+	position: absolute; 
+	margin-left: -1.3em; 
+}
+.SortableList label
+{
+	cursor:n-resize;
+}
+
+.SeparatorLine1
+{
+	height:1px; 
+	overflow:hidden; 
+	background-color:#cccccc; 
+	margin:0px;
+}
+
+.SeparatorLine2
+{
+	height:1px; 
+	overflow:hidden; 
+	background-color:#000000; 
+	margin:0px;
+}
+
+.InlinePanel1
+{
+	background-color:#e0eebc; 
+	border: solid 1px #80A232;
+}
+
+.InlinePanel2
+{
+	background-color:#e0eebc; 
+	border: solid 1px #80A232;
+	padding:10px; 
+	color:#54691d; 
+}
+
+.LineSpacer1
+{
+	height:5px;
+	overflow:hidden;
+}
+
+
+
+
+
+
+.ExampleTableContainer
+{
+	padding: 5px; 
+	border: solid 1px #cccccc;
+}
+
+.ExampleTableText
+{
+	font-size: 18px;
+}
+
+.ExampleTableCell
+{
+	text-align: center;
+}
+
+.ExampleTableCellTitle
+{
+	color: #333333; 
+	font-size: 20px;
+}
+
+
+
+
+
+
+.ExampleTableProcessTopCell
+{
+	height:90px;
+	background-color:#80A232;
+	color: #ffffff;
+}
+
+.ExampleTableProcessTopCellTitle
+{
+	margin-top:5px;
+	color:#ffffff; 
+	font-size:20px;
+}
+
+.ExampleTableProcessTopCellImage
+{
+	width:100%; 
+	height:60px;
+}
+
+
+
+
+
+.ExampleTableProcessBottomCell
+{
+	background-color:#80A232;  
+	color: #ffffff;
+	background-image: url("../gfx/saBottom.jpg"); 
+	background-position: center bottom; 
+	background-repeat: no-repeat;
+}
+
+.ExampleTableProcessBottomCellSpacer
+{
+	height:10px;
+}
+
+
+.ExampleTableImage
+{
+	padding: 10px 0px;
+}
+
+
+.ColorSelector {
+	position: relative;
+	width: 36px;
+	height: 36px;
+	background: url("../libraries/jquery/colorpicker/images/select2.png");
+}
+.ColorSelector div {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 30px;
+	height: 30px;
+	background: url("../libraries/jquery/colorpicker/images/select2.png") center;
+}
+
+.DefaultTableFormCellHeight
+{
+	height: 34px;
+}
+
+.DefaultTableFormCellSeparator
+{
+	height: 15px;
+	overflow:hidden;
+}
+
+.EditBox
+{
+	border:solid 1px #54691d; 
+	padding:10px;
+}
+
+.GroupBox_Div
+{
+	border: solid 1px #54691D;
+}
+.GroupBox_Header
+{
+	background-color:#54691D; 
+	color:#ffffff; 
+	padding-left:5px;
+}
+.GroupBox_Body
+{
+	padding:5px;
+}
