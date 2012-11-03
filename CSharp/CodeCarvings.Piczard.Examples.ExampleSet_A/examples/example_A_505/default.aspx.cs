@@ -30,7 +30,7 @@ public partial class examples_example_A_505_default : System.Web.UI.Page
         if (!this.Page.IsPostBack)
         {
             // Check the SQL Server DB configuration.
-            ExamplesHelper.CheckDbConnection_SqlServer();
+            ExamplesHelper.CheckDbConnection_SqlServer(Request["skipcscheck"] == "1");
         }
     }
 

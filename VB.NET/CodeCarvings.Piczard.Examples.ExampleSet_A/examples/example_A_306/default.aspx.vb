@@ -32,7 +32,7 @@ Partial Class examples_example_A_306_default
 
         If (Not Me.IsPostBack) Then
             ' Check the SQL Server DB configuration.
-            ExamplesHelper.CheckDbConnection_SqlServer()
+            ExamplesHelper.CheckDbConnection_SqlServer(Request("skipcscheck") = "1")
 
             ' Display the picture
             Me.displayImage1()

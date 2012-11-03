@@ -56,12 +56,16 @@ public static class ExamplesHelper
 
     /// <summary>
     /// Checks the SQL Server DB configuration.</summary>
-    public static void CheckDbConnection_SqlServer()
+    /// <param name="skipCSCheck">If True does not check the connection string.</param>
+    public static void CheckDbConnection_SqlServer(bool skipCSCheck)
     {
-        if (System.Configuration.ConfigurationManager.ConnectionStrings[SqlServerConnectionStringName].ConnectionString == DefaultSqlServerConnectionString)
+        if (!skipCSCheck)
         {
-            // Connection string non set
-            throw new Exception("Please configure the MS SQL Server database connection string \"" + SqlServerConnectionStringName + "\" in the Web.Config file.");
+            if (System.Configuration.ConfigurationManager.ConnectionStrings[SqlServerConnectionStringName].ConnectionString == DefaultSqlServerConnectionString)
+            {
+                // Connection string non set
+                throw new Exception("Please configure the MS SQL Server database connection string \"" + SqlServerConnectionStringName + "\" in the Web.Config file.");
+            }
         }
 
         int totRecords;
@@ -113,7 +117,7 @@ public static class ExamplesHelper
 
     private const string Db1ConnectionStringName = "Db1ConnectionString";
     private const string SqlServerConnectionStringName = "SqlServerConnectionString";
-    private const string DefaultSqlServerConnectionString = "Server=127.0.0.1; Database=CodeCarvings_Piczard_V1_0_ES_A; uid=..; pwd=..; Persist Security Info=False";
+    private const string DefaultSqlServerConnectionString = @"Server=localhost\SQLExpress; Database=CodeCarvings_Piczard_V1_0_ES_A; uid=myUsername; pwd=myPassword; Persist Security Info=False";
 
     #region LoadLibrary
 

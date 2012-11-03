@@ -21,7 +21,7 @@ Partial Class examples_example_A_505_default
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If (Not Me.Page.IsPostBack) Then
             ' Check the SQL Server DB configuration.
-            ExamplesHelper.CheckDbConnection_SqlServer()
+            ExamplesHelper.CheckDbConnection_SqlServer(Request("skipcscheck") = "1")
         End If
     End Sub
 

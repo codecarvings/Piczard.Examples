@@ -51,10 +51,13 @@ Public NotInheritable Class ExamplesHelper
 
     ''' <summary>
     ''' Checks the SQL Server DB configuration.</summary>
-    Public Shared Sub CheckDbConnection_SqlServer()
-        If (System.Configuration.ConfigurationManager.ConnectionStrings(SqlServerConnectionStringName).ConnectionString = DefaultSqlServerConnectionString) Then
-            ' Connection string non set
-            Throw New Exception("Please configure the MS SQL Server database connection string """ + SqlServerConnectionStringName + """ in the Web.Config file.")
+    ''' <param name="skipCSCheck">If True does not check the connection string.</param>
+    Public Shared Sub CheckDbConnection_SqlServer(ByVal skipCSCheck As Boolean)
+        If (Not skipCSCheck) Then
+            If (System.Configuration.ConfigurationManager.ConnectionStrings(SqlServerConnectionStringName).ConnectionString = DefaultSqlServerConnectionString) Then
+                ' Connection string non set
+                Throw New Exception("Please configure the MS SQL Server database connection string """ + SqlServerConnectionStringName + """ in the Web.Config file.")
+            End If
         End If
 
         Dim totRecords As Integer
@@ -100,7 +103,7 @@ Public NotInheritable Class ExamplesHelper
 
     Private Const Db1ConnectionStringName As String = "Db1ConnectionString"
     Private Const SqlServerConnectionStringName As String = "SqlServerConnectionString"
-    Private Const DefaultSqlServerConnectionString As String = "Server=127.0.0.1; Database=CodeCarvings_Piczard_V1_0_ES_A; uid=..; pwd=..; Persist Security Info=False"
+    Private Const DefaultSqlServerConnectionString As String = "Server=localhost\SQLExpress; Database=CodeCarvings_Piczard_V1_0_ES_A; uid=myUsername; pwd=myPassword; Persist Security Info=False"
 
 #Region "LoadLibrary"
 
