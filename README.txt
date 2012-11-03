@@ -1,7 +1,7 @@
 Piczard Examples
 
-The aim of those examples is to illustrate the use of the basic features of Piczard - .NET image manipulation library.
-These examples may not be drop-in solutions for your application but may help you find the direction you need to solve your particular issue.
+The aim of these examples is to illustrate the use of the basic features of Piczard - .NET image manipulation library.
+They may not be drop-in solutions for your application but may help you find the direction you need to solve your particular issue.
 
 The repository contains 2 separate solutions:
 
