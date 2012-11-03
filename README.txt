@@ -4,8 +4,10 @@ The aim of those examples is to illustrate the use of the basic features of Picz
 These examples may not be drop-in solutions for your application but may help you find the direction you need to solve your particular issue.
 
 The repository contains 2 separate solutions:
-- Sharp/CodeCarvings.Piczard.Examples.ExampleSet_A_CS.sln 
+
+- CSharp/CodeCarvings.Piczard.Examples.ExampleSet_A_CS.sln 
 - VB.NET/CodeCarvings.Piczard.Examples.ExampleSet_A_VB.sln
+
 Both solutions are absolutely identical with the exception of the used programming language (C # or VB.NET).
 
 The examples have been developed by using version 2008 of Microsoft Visual Studio.
