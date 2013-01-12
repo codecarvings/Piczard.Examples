@@ -1,7 +1,7 @@
 ﻿<%@ WebHandler Language="VB" Class="LoadImageHelper" %>
 ' -------------------------------------------------------
 ' Piczard Examples | ExampleSet -A- VB.NET
-' Copyright 2011-2012 Sergio Turolla - All Rights Reserved.
+' Copyright 2011-2013 Sergio Turolla - All Rights Reserved.
 ' Author: Sergio Turolla
 ' <codecarvings.com>
 '  

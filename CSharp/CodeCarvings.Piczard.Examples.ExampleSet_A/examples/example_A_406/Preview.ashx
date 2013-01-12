@@ -1,7 +1,7 @@
 ﻿<%@ WebHandler Language="C#" Class="Preview" %>
 /*
  * Piczard Examples | ExampleSet -A- C#
- * Copyright 2011-2012 Sergio Turolla - All Rights Reserved.
+ * Copyright 2011-2013 Sergio Turolla - All Rights Reserved.
  * Author: Sergio Turolla
  * <codecarvings.com>
  *  

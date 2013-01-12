@@ -3,7 +3,7 @@
  * Author: Sergio Turolla
  * <codecarvings.com>
  * 
- * Copyright (c) 2011-2012 Sergio Turolla
+ * Copyright (c) 2011-2013 Sergio Turolla
  * All rights reserved.
  * 
  * Redistribution and use in source and binary forms, with or
@@ -35,7 +35,7 @@
  */
  
 // #########
-// SimpleImageUpload Version 3.0.0
+// SimpleImageUpload Version 3.0.2
 // #########
 
 using System;
@@ -1957,7 +1957,7 @@ public partial class SimpleImageUpload
 
     #region Load
 
-    protected void LoadImageFromFileSystem_Internal(string sourceImageFilePath, System.Drawing.Image sourceImage, Guid sourceImageFormatId, float sourceImageResolution, bool disposeSourceImage, PictureTrimmerValue value)
+    protected void LoadImageFromFileSystem_Internal(string sourceImageFilePath, System.Drawing.Image sourceImage, Size sourceImageSize, Guid sourceImageFormatId, float sourceImageResolution, bool disposeSourceImage, PictureTrimmerValue value)
     {
         // Calculate the client file name
         this.SourceImageClientFileName = "noname" + ImageArchiver.GetFormatEncoderParams(sourceImageFormatId).FileExtension;
@@ -1978,7 +1978,7 @@ public partial class SimpleImageUpload
         if (!CodeCarvings.Piczard.Configuration.WebSettings.PictureTrimmer.UseTemporaryFiles)
         {
             // The picture trimmer cannot use temporary files -> Load the image now
-            this.popupPictureTrimmer1.SetLoadImageData_ImageSize(sourceImage.Size);
+            this.popupPictureTrimmer1.SetLoadImageData_ImageSize(sourceImageSize);
             this.popupPictureTrimmer1.SetLoadImageData_ImageResolution(sourceImageResolution);
             this.popupPictureTrimmer1.SetLoadImageData_ImageFormatId(sourceImageFormatId);
 
@@ -2003,7 +2003,7 @@ public partial class SimpleImageUpload
     {
         using (LoadedImage image = ImageArchiver.LoadImage(sourceImageFilePath))
         {
-            this.LoadImageFromFileSystem_Internal(sourceImageFilePath, image.Image, image.FormatId, image.Resolution, true, value);
+            this.LoadImageFromFileSystem_Internal(sourceImageFilePath, image.Image, image.Size, image.FormatId, image.Resolution, true, value);
         }
     }
 
@@ -2013,6 +2013,9 @@ public partial class SimpleImageUpload
     /// <param name="value">The PictureTrimmerValue to apply.</param>
     public void LoadImageFromFileSystem(string sourceImageFilePath, PictureTrimmerValue value)
     {
+        // Translate path to absolute
+        sourceImageFilePath = CodeCarvings.Piczard.Helpers.IOHelper.TranslatePathToAbsolute(sourceImageFilePath);
+
         // Copy the source image into the temporary folder
         // So there is no problem il the original source image is deleted (e.g. when a record is updated...)
         System.IO.File.Copy(sourceImageFilePath, this.TemporarySourceImageFilePath, true);
@@ -2108,7 +2111,7 @@ public partial class SimpleImageUpload
         ImageArchiver.SaveImageToFileSystem(sourceImage.Image, this.TemporarySourceImageFilePath, new PngFormatEncoderParams());
 
         // Load the image into the control
-        this.LoadImageFromFileSystem_Internal(this.TemporarySourceImageFilePath, sourceImage.Image, sourceImage.FormatId, sourceImage.Resolution, false, value);
+        this.LoadImageFromFileSystem_Internal(this.TemporarySourceImageFilePath, sourceImage.Image, sourceImage.Size, sourceImage.FormatId, sourceImage.Resolution, false, value);
     }
 
     /// <summary>
@@ -2129,7 +2132,7 @@ public partial class SimpleImageUpload
         ImageArchiver.SaveImageToFileSystem(sourceImage, this.TemporarySourceImageFilePath, new PngFormatEncoderParams());
 
         // Load the image into the control
-        this.LoadImageFromFileSystem_Internal(this.TemporarySourceImageFilePath, sourceImage, sourceImage.RawFormat.Guid, CodeCarvings.Piczard.Helpers.ImageHelper.GetImageResolution(sourceImage), false, value);
+        this.LoadImageFromFileSystem_Internal(this.TemporarySourceImageFilePath, sourceImage, sourceImage.Size, sourceImage.RawFormat.Guid, CodeCarvings.Piczard.Helpers.ImageHelper.GetImageResolution(sourceImage), false, value);
     }
 
     /// <summary>
@@ -2406,12 +2409,10 @@ public partial class SimpleImageUpload
     protected void ProcessUploadSuccess()
     {
         string sourceImageClientFileName = this._SourceImageClientFileName;
-        string pictureTrimmerTID = null;
 
         if (this.HasImage)
         {
             // Unload the current image
-            pictureTrimmerTID = this.popupPictureTrimmer1.TemporaryFileId;
             this.UnloadImage(false);
         }
 
@@ -2488,24 +2489,30 @@ public partial class SimpleImageUpload
             if (this.ImageUpload != null)
             {
                 // EVENT: Image upload
+                string pictureTrimmerTID = this.popupPictureTrimmer1.TemporaryFileId;
                 ImageUploadEventArgs args = new ImageUploadEventArgs(this._OutputResolution, this.CropConstraint, this.PostProcessingFilter, this.PreviewFilter);
                 this.OnImageUpload(args);
                 if (this.HasImage)
                 {
-                    if (!string.IsNullOrEmpty(pictureTrimmerTID))
+                    if (this.popupPictureTrimmer1.TemporaryFileId != pictureTrimmerTID)
                     {
-                        if (this.popupPictureTrimmer1.TemporaryFileId != pictureTrimmerTID)
+                        // The image has been reloeaded outside the control
+
+                        if (this.AutoOpenImageEditPopupAfterUpload)
                         {
-                            // The image has been reloeaded outside the control, exit.
-                            return;
+                            // Open the image edit popup if necessary
+                            this.OpenImageEditPopup();
                         }
+
+                        // Exit !!!
+                        return;
                     }
                 }
                 else
                 {
                     // The image has been unloaded, exit.
                     return;
-                }                
+                }
 
                 bool reloadImage = false;
                 if (args.OutputResolutionChanged)
